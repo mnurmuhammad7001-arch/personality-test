@@ -1,0 +1,78 @@
+/* Общие стили */
+body {
+  font-family: Arial, sans-serif;
+  background: linear-gradient(135deg, #18326f, #164596);
+  color: rgb(227, 227, 227);
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+/* Основной контейнер */
+.container {
+  background: rgba(13, 5, 43, 0.4);
+  padding: 30px;
+  border-radius: 20px;
+  max-width: 600px;
+  width: 90%;
+  text-align: center;
+}
+
+h1, h2 {
+  margin-bottom: 15px;
+}
+
+button {
+  background-color: #4caf50;
+  border: none;
+  color: rgb(255, 255, 255);
+  padding: 12px 20px;
+  border-radius: 10px;
+  cursor: pointer;
+  margin-top: 15px;
+  font-size: 16px;
+}
+
+button:hover {
+  background-color: #45a049;
+}
+
+/* Радиокнопки и текст в одну линию */
+label {
+  display: flex;
+  align-items: center;
+  margin: 5px 0;
+  cursor: pointer;
+}
+
+input[type=radio] {
+  margin: 0 5px 0 0; /* расстояние между кружком и текстом */
+  vertical-align: middle;
+   width: 25px;     /* ширина кружка */
+  height: 25px;    /* высота кружка */
+  vertical-align: bottom; /* выравнивание с текстом */
+  margin-right: 8px;       /* расстояние между кружком и текстом */
+}
+
+.hidden {
+  display: none;
+}
+
+input, select {
+  padding: 8px;
+  border-radius: 8px;
+  border: none;
+  width: 100%;
+  margin-top: 5px;
+}
+input#age {
+  width: 550px;       /* ширина поля, можно менять */
+  padding: 5px 10px; /* внутренние отступы */
+  font-size: 16px;   /* размер текста */
+  border: 2px solid #4a90e2; /* цвет и толщина границы */
+  border-radius: 5px; /* скругление углов */
+}
+
