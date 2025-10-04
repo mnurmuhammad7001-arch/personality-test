@@ -172,11 +172,10 @@ function showResult() {
   quiz.classList.add("hidden");
   resultScreen.classList.remove("hidden");
 
-  let type;
-  let description;
+  let description; // только description локально
 
   if (totalScore <= 20) {
-    type = "Интроверт";
+    type = "Интроверт"; // используем глобальную переменную
     description = "Интроверт – тот, кто больше времени проводит наедине с собой и заводит близкие отношения с не таким большим количеством людей.";
   } else if (totalScore <= 29) {
     type = "Амбиверт";
@@ -188,6 +187,7 @@ function showResult() {
 
   resultText.textContent = `Возраст: ${age}, Направление: ${direction}, Ваш тип личности: ${type}\nОписание: ${description}`;
 }
+
 
 
 // ---------------------- Сохранение в Firebase ----------------------
@@ -207,4 +207,5 @@ async function saveResult(){
     alert("Ошибка при сохранении результатов. Попробуйте позже.");
   }
 }
+
 
