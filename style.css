@@ -44,10 +44,13 @@ button:hover {
 }
 
 label {
-  display: block;
+  display: flex;
+  align-items: center;
+  gap: 10px; /* расстояние между кружком и текстом */
   margin: 8px 0;
   cursor: pointer;
 }
+
 
 .hidden {
   display: none;
