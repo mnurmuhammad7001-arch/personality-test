@@ -3,41 +3,31 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Тест на тип личности</title>
+  <title>Тест личности</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
   <div class="container">
     <h1>Тест: Определи свой тип личности</h1>
 
-    <div id="start-screen">
-      <h2>Введите данные</h2>
-      <label>Возраст:
-        <input type="number" id="age" placeholder="Например, 19" required>
-      </label>
-      <label>Направление:
-        <select id="direction">
-          <option value="">Выберите</option>
-          <option value="med">Лечебное дело</option>
-          <option value="dnt">Стоматология</option>
-        </select>
-      </label>
-      <button id="start-btn">Начать тест</button>
-    </div>
+    <form id="quizForm">
+      <label for="age">Возраст:</label>
+      <input type="number" id="age" name="age" required>
 
-    <div id="quiz" class="hidden">
-      <h2 id="question-text"></h2>
-      <div id="answers"></div>
-      <button id="next-btn">Далее</button>
-    </div>
+      <label for="direction">Направление:</label>
+      <select id="direction" name="direction" required>
+        <option value="med">Лечебное дело</option>
+        <option value="dnt">Стоматология</option>
+      </select>
 
-    <div id="result-screen" class="hidden">
-      <h2>Результат</h2>
-      <p id="result-text"></p>
-      <button onclick="location.reload()">Пройти заново</button>
-    </div>
+      <div id="questions"></div>
+
+      <button type="submit">Отправить</button>
+    </form>
+
+    <div id="result"></div>
   </div>
 
-  <script src="script.js"></script>
+  <script type="module" src="script.js"></script>
 </body>
 </html>
